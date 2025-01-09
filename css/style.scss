@@ -59,6 +59,13 @@ h1 {
 .header {
     background-color: #6E36F7;
 
+    &_p {
+        cursor: pointer;
+        &:hover {
+            color: black;
+        }
+    }
+
     &_box {
         border: 1px solid black;
         display: flex;
@@ -73,6 +80,8 @@ h1 {
         height: 50px;
         position: relative;
         left: 42%;
+        margin-top: 15px;
+        margin-bottom: 25px;
         // border: 1px solid red;
     }
 
