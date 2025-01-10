@@ -13,58 +13,8 @@
     margin: 0 auto;
 }
 
-.globus-language {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.option {
-    background-color: #6E36F7;
-    border: none;
-}
-
-#language {
-    background-color: inherit;
-    border: none;
-    outline: none;
-    font-family: Roboto;
-    color: white;
-    font-size: 16px;
-}
-
-h1 {
-    color: rgb(226, 121, 138);
-    margin: 20px 0;
-    font-size: 42px;
-}
-
-.chapter {
-    text-align: center;
-    width: 140px;
-    padding: 10px 0;
-    background-color: #7f61ca;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    border-bottom-right-radius: 20px;
-    border-bottom-left-radius: 20px;
-    cursor: pointer;
-
-    &:hover {
-        background-color: white;
-        color: black;
-    }
-}
-
 .header {
     background-color: #6E36F7;
-
-    &_p {
-        cursor: pointer;
-        &:hover {
-            color: black;
-        }
-    }
 
     &_box {
         border: 1px solid black;
@@ -85,11 +35,65 @@ h1 {
         // border: 1px solid red;
     }
 
+    &_p {
+        cursor: pointer;
+        &:hover {
+            color: black;
+        }
+    }
+
+    .globus-language {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+
+    #language {
+        background-color: inherit;
+        border: none;
+        outline: none;
+        font-family: Roboto;
+        color: white;
+        font-size: 16px;
+    }
+
+    .option {
+        background-color: #6E36F7;
+        border: none;
+    }
+
+    h1 {
+        color: rgb(226, 121, 138);
+        margin: 20px 0;
+        font-size: 42px;
+    }
+
     &_box-chapter {
         display: flex;
         justify-content: space-between;
         width: 70%;
         // border: 1px solid red;
         margin: 10px 0;
+    }
+
+    .chapter {
+        text-align: center;
+        width: 140px;
+        padding: 10px 0;
+        background-color: #7f61ca;
+        border-top-left-radius: 20px;
+        border-top-right-radius: 20px;
+        border-bottom-right-radius: 20px;
+        border-bottom-left-radius: 20px;
+        cursor: pointer;
+    
+        &:hover {
+            background-color: white;
+            color: black;
+        }
+    }
+
+    &_box-input {
+        display: flex;
     }
 }
