@@ -17,7 +17,6 @@
   background-color: #6E36F7;
 }
 .header_box {
-  border: 1px solid black;
   display: flex;
   flex-direction: column;
 }
@@ -76,11 +75,128 @@
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
   cursor: pointer;
+  font-weight: bold;
 }
 .header .chapter:hover {
   background-color: white;
   color: black;
 }
 .header_box-input {
+  position: relative;
   display: flex;
+}
+.header .lab-1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+  left: 10px;
+}
+.header .lab-2 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+  left: 280px;
+  left: 280px;
+}
+.header .lab-3 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+  left: 545px;
+}
+.header .lab-4 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+  left: 815px;
+}
+.header_input {
+  width: 266px;
+  height: 70px;
+  margin: 10px 0;
+  box-sizing: border-box;
+  border: none;
+  outline: none;
+  font-family: Roboto;
+  font-size: 16px;
+  font-weight: bold;
+}
+.header .button-in-header {
+  background-color: rgb(217, 53, 53);
+  font-family: Roboto;
+  color: white;
+  font-size: 16px;
+  font-weight: bold;
+  width: 115px;
+  height: 70px;
+  margin: 10px 10px;
+  border: none;
+  border-radius: 5px;
+}
+.header .button-in-header:hover {
+  background-color: white;
+  color: black;
+}
+.header .input-1 {
+  border-top-left-radius: 5px;
+  border-bottom-left-radius: 5px;
+}
+.header .input-1:not(:-moz-placeholder-shown) + .lab-1 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
+.header .input-1:focus + .lab-1, .header .input-1:not(:placeholder-shown) + .lab-1 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
+.header .input-2 {
+  border-left: 1px solid lightgray;
+}
+.header .input-2:not(:-moz-placeholder-shown) + .lab-2 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
+.header .input-2:focus + .lab-2, .header .input-2:not(:placeholder-shown) + .lab-2 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
+.header .input-3 {
+  border-left: 1px solid lightgray;
+}
+.header .input-3:not(:-moz-placeholder-shown) + .lab-3 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
+.header .input-3:focus + .lab-3, .header .input-3:not(:placeholder-shown) + .lab-3 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
+.header .input-4 {
+  border-left: 1px solid lightgray;
+  border-top-right-radius: 5px;
+  border-bottom-right-radius: 5px;
+}
+.header .input-4:not(:-moz-placeholder-shown) + .lab-4 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
+.header .input-4:focus + .lab-4, .header .input-4:not(:placeholder-shown) + .lab-4 {
+  transform: translateY(-180%);
+  font-size: 12px;
 }/*# sourceMappingURL=style.css.map */
