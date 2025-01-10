@@ -37,6 +37,7 @@ $redForButton: rgb(217, 53, 53);
 
 .header {
     background-color: #6E36F7;
+    height: 450px;
 
     &_box {
         // border: 1px solid black;
@@ -117,10 +118,36 @@ $redForButton: rgb(217, 53, 53);
         }
     }
 
+    .chapter-hotel {
+        display: flex;
+        justify-content: space-around;
+    }
+
+    .percent {
+        background-color: green;
+        width: 55px;
+        height: 20px;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
+        border-bottom-left-radius: 10px;
+        &:hover {
+            background-color: red;
+        }
+    }
+
     &_box-input {
         position: relative;
         display: flex;
+        // margin-bottom: 80px; 
         // border: 1px solid red;
+    }
+
+    &_direction {
+        display: flex;
+        width: 175px;
+        justify-content: space-between;
+        margin: 10px 0;
     }
 
     .lab-1 {
@@ -135,6 +162,10 @@ $redForButton: rgb(217, 53, 53);
 
     .lab-3 {
         @include createLabel("545px");
+    }
+
+    .lab-3-1 {
+        @include createLabel("650px");
     }
 
     .lab-4 {
@@ -163,7 +194,7 @@ $redForButton: rgb(217, 53, 53);
         height: 70px;
         margin: 10px 10px;
         border: none;
-        border-radius: 5px;
+        border-radius: 10px;
 
         &:hover {
             background-color: white;
@@ -172,8 +203,8 @@ $redForButton: rgb(217, 53, 53);
     }
 
     .input-1 {
-        border-top-left-radius: 5px;
-        border-bottom-left-radius: 5px;
+        border-top-left-radius: 10px;
+        border-bottom-left-radius: 10px;
         @include focusAndNotPlaceholderForInput(".lab-1");
     }
 
@@ -184,13 +215,19 @@ $redForButton: rgb(217, 53, 53);
 
     .input-3 {
         border-left: 1px solid lightgray;
+        width: 133px;
         @include focusAndNotPlaceholderForInput(".lab-3");
+    }
+
+    .input-3-1 {
+        width: 133px;
+        @include focusAndNotPlaceholderForInput(".lab-3-1");
     }
 
     .input-4 {
         border-left: 1px solid lightgray;
-        border-top-right-radius: 5px;
-        border-bottom-right-radius: 5px;
+        border-top-right-radius: 10px;
+        border-bottom-right-radius: 10px;
         @include focusAndNotPlaceholderForInput(".lab-4");
     }
 }

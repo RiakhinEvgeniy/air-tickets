@@ -15,6 +15,7 @@
 
 .header {
   background-color: #6E36F7;
+  height: 450px;
 }
 .header_box {
   display: flex;
@@ -81,9 +82,31 @@
   background-color: white;
   color: black;
 }
+.header .chapter-hotel {
+  display: flex;
+  justify-content: space-around;
+}
+.header .percent {
+  background-color: green;
+  width: 55px;
+  height: 20px;
+  border-top-left-radius: 10px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.header .percent:hover {
+  background-color: red;
+}
 .header_box-input {
   position: relative;
   display: flex;
+}
+.header_direction {
+  display: flex;
+  width: 175px;
+  justify-content: space-between;
+  margin: 10px 0;
 }
 .header .lab-1 {
   position: absolute;
@@ -116,6 +139,16 @@
   pointer-events: none;
   left: 545px;
 }
+.header .lab-3-1 {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 16px;
+  color: #aaa;
+  transition: 0.3s ease-in-out;
+  pointer-events: none;
+  left: 650px;
+}
 .header .lab-4 {
   position: absolute;
   top: 50%;
@@ -147,15 +180,15 @@
   height: 70px;
   margin: 10px 10px;
   border: none;
-  border-radius: 5px;
+  border-radius: 10px;
 }
 .header .button-in-header:hover {
   background-color: white;
   color: black;
 }
 .header .input-1 {
-  border-top-left-radius: 5px;
-  border-bottom-left-radius: 5px;
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
 }
 .header .input-1:not(:-moz-placeholder-shown) + .lab-1 {
   transform: translateY(-180%);
@@ -178,6 +211,7 @@
 }
 .header .input-3 {
   border-left: 1px solid lightgray;
+  width: 133px;
 }
 .header .input-3:not(:-moz-placeholder-shown) + .lab-3 {
   transform: translateY(-180%);
@@ -187,10 +221,21 @@
   transform: translateY(-180%);
   font-size: 12px;
 }
+.header .input-3-1 {
+  width: 133px;
+}
+.header .input-3-1:not(:-moz-placeholder-shown) + .lab-3-1 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
+.header .input-3-1:focus + .lab-3-1, .header .input-3-1:not(:placeholder-shown) + .lab-3-1 {
+  transform: translateY(-180%);
+  font-size: 12px;
+}
 .header .input-4 {
   border-left: 1px solid lightgray;
-  border-top-right-radius: 5px;
-  border-bottom-right-radius: 5px;
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
 }
 .header .input-4:not(:-moz-placeholder-shown) + .lab-4 {
   transform: translateY(-180%);
