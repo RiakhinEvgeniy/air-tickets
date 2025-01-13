@@ -50,6 +50,10 @@
   font-family: Roboto;
   color: white;
   font-size: 16px;
+  cursor: pointer;
+}
+.header #language:hover {
+  color: black;
 }
 .header .option {
   background-color: #6E36F7;
@@ -102,7 +106,7 @@
   position: relative;
   display: flex;
 }
-.header_direction {
+.header_rote {
   display: flex;
   width: 175px;
   justify-content: space-between;
@@ -181,6 +185,7 @@
   margin: 10px 10px;
   border: none;
   border-radius: 10px;
+  cursor: pointer;
 }
 .header .button-in-header:hover {
   background-color: white;
@@ -244,4 +249,143 @@
 .header .input-4:focus + .lab-4, .header .input-4:not(:placeholder-shown) + .lab-4 {
   transform: translateY(-180%);
   font-size: 12px;
+}
+
+.main {
+  background-color: lightgray;
+}
+.main_box-grid {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  grid-template-rows: repeat(4, auto);
+  grid-gap: 30px;
+  grid-template-areas: "card1 card1 card1 card2 card2 card2" "card3 card3 card3 card3 card4 card4" "card5 card5 card5 card5 card6 card6" "card5 card5 card5 card5 card7 card7";
+}
+.main_p-title {
+  color: black;
+  font-weight: bold;
+  margin: 5px 10px;
+}
+.main_p-text {
+  font-size: 13px;
+  margin: 3px 10px;
+  color: gray;
+}
+.main_img {
+  position: absolute;
+  width: 80px;
+  height: 80px;
+  left: 80%;
+  bottom: 0;
+}
+.main_btn-card1 {
+  background-color: lightpink;
+  color: red;
+  border: none;
+  width: 40%;
+  height: 25px;
+  margin-top: 12px;
+  margin-left: 10px;
+  font-family: Roboto;
+  cursor: pointer;
+}
+.main_btn-card1:hover {
+  background-color: #6E36F7;
+  color: white;
+}
+.main_btn-card2 {
+  background-color: rgb(217, 53, 53);
+  font-family: Roboto;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  width: 20%;
+  height: 30px;
+  margin-left: 10px;
+  margin-top: 15px;
+  cursor: pointer;
+}
+.main_btn-card2:hover {
+  background-color: #6E36F7;
+  color: white;
+}
+.main_img-bus {
+  position: absolute;
+  right: 0px;
+  top: -20px;
+}
+.main_p-card3 {
+  color: black;
+  margin: 20px 10px;
+  padding: 8px 0;
+  box-sizing: border-box;
+}
+.main .red {
+  display: flex;
+  justify-content: center;
+  color: red;
+}
+.main .div1 {
+  display: flex;
+  flex-direction: column;
+  width: 35%;
+  height: 100%;
+}
+.main .div2 {
+  display: flex;
+  flex-direction: column;
+  width: 15%;
+}
+.main .card-1 {
+  display: flex;
+  flex-direction: column;
+  grid-area: card1;
+  height: 120px;
+  color: gray;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 10px;
+  box-sizing: border-box;
+  position: relative;
+}
+.main .card-2 {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  grid-area: card2;
+  height: 120px;
+  color: gray;
+  background-color: white;
+  border-radius: 4px;
+  margin-top: 10px;
+  box-sizing: border-box;
+}
+.main .card-3 {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  grid-area: card3;
+  height: 100%;
+  background-color: white;
+}
+.main .card-4 {
+  width: 100%;
+  grid-area: card4;
+  height: 105%;
+  background-color: white;
+}
+.main .card-5 {
+  grid-area: card5;
+  background-color: white;
+  margin-top: 20px;
+}
+.main .card-6 {
+  margin-top: 20px;
+  grid-area: card6;
+  background-color: white;
+}
+.main .card-7 {
+  grid-area: card7;
+  height: 80px;
 }/*# sourceMappingURL=style.css.map */
