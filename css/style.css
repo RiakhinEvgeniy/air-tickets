@@ -468,6 +468,7 @@
   grid-area: card5;
   background-color: white;
   margin-top: 20px;
+  margin-bottom: 70px;
 }
 .main .card-6 {
   display: flex;
@@ -484,4 +485,39 @@
   height: 220px;
   margin-top: -100px;
   box-sizing: border-box;
+}
+
+.footer_icons {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.footer_container-info {
+  display: flex;
+  justify-content: space-between;
+}
+.footer_info {
+  display: flex;
+  flex-direction: column;
+}
+.footer .info-title {
+  color: black;
+  font-weight: bold;
+  font-size: 14px;
+  padding: 7px 0;
+}
+.footer .info-text {
+  color: darkslategray;
+  font-size: 13px;
+}
+.footer .info-text-end {
+  color: blue;
+  font-size: 13px;
+  padding: 7px 0;
+}
+.footer .end1 {
+  padding-top: 22px;
+}
+.footer .end2 {
+  padding-top: 37px;
 }/*# sourceMappingURL=style.css.map */
