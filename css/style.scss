@@ -254,7 +254,7 @@ $forText: darkslategray;
         display: grid;
         grid-template-columns: repeat(6, 1fr);
         grid-template-rows: repeat(4, auto);
-        grid-gap: 30px;
+        grid-gap: 40px;
         grid-template-areas:
             "card1 card1 card1 card2 card2 card2"
             "card3 card3 card3 card3 card4 card4"
@@ -432,6 +432,10 @@ $forText: darkslategray;
         height: 30px;
         border: none;
         color: white;
+        cursor: pointer;
+        &:hover {
+            background-color: $blueBackground;
+        }
     }
 
     .card-1 {
@@ -525,7 +529,7 @@ $forText: darkslategray;
         color: black;
         font-weight: bold;
         font-size: 14px;
-        padding: 7px 0;
+        padding: 9px 0;
     }
 
     .info-text {
@@ -536,16 +540,62 @@ $forText: darkslategray;
     .info-text-end {
         color: blue;
         font-size: 13px;
-        padding: 7px 0;
-        // position: absolute;
-        // bottom: -40px;
+        padding: 9px 0;
+        cursor: pointer;
+        &:hover {
+            font-weight: bold;
+        }
     }
 
     .end1 {
-        padding-top: 22px;
+        padding-top: 24px;
     }
 
     .end2 {
-        padding-top: 37px;
+        padding-top: 39px;
+    }
+
+    &_box-logos {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .frame {
+        border: 1px solid blue;
+    }
+
+    .frame-text {
+        color: blue;
+        padding: 10px;
+        font-size: 13px;
+        cursor: pointer;
+        &:hover {
+            font-weight: bold;
+        }
+    }
+
+    &_social-nets {
+        display: flex;
+        justify-content: space-between;
+        width: 40%;
+        margin: 30px 0;
+        // border: 1px solid red;
+    }
+
+    &_contacts {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 20%;
+        // border: 1px solid red;
+    }
+
+    .contacts-img {
+        padding: 0 5px;
+        cursor: pointer;
+        &:hover {
+            width: 28px;
+            height: 28px;
+        }
     }
 }

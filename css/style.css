@@ -258,7 +258,7 @@
   display: grid;
   grid-template-columns: repeat(6, 1fr);
   grid-template-rows: repeat(4, auto);
-  grid-gap: 30px;
+  grid-gap: 40px;
   grid-template-areas: "card1 card1 card1 card2 card2 card2" "card3 card3 card3 card3 card4 card4" "card5 card5 card5 card5 card6 card6" "card5 card5 card5 card5 card7 card7";
 }
 .main_card {
@@ -425,6 +425,10 @@
   height: 30px;
   border: none;
   color: white;
+  cursor: pointer;
+}
+.main .card7-btn:hover {
+  background-color: #6E36F7;
 }
 .main .card-1 {
   display: flex;
@@ -504,7 +508,7 @@
   color: black;
   font-weight: bold;
   font-size: 14px;
-  padding: 7px 0;
+  padding: 9px 0;
 }
 .footer .info-text {
   color: darkslategray;
@@ -513,11 +517,51 @@
 .footer .info-text-end {
   color: blue;
   font-size: 13px;
-  padding: 7px 0;
+  padding: 9px 0;
+  cursor: pointer;
+}
+.footer .info-text-end:hover {
+  font-weight: bold;
 }
 .footer .end1 {
-  padding-top: 22px;
+  padding-top: 24px;
 }
 .footer .end2 {
-  padding-top: 37px;
+  padding-top: 39px;
+}
+.footer_box-logos {
+  display: flex;
+  justify-content: space-between;
+}
+.footer .frame {
+  border: 1px solid blue;
+}
+.footer .frame-text {
+  color: blue;
+  padding: 10px;
+  font-size: 13px;
+  cursor: pointer;
+}
+.footer .frame-text:hover {
+  font-weight: bold;
+}
+.footer_social-nets {
+  display: flex;
+  justify-content: space-between;
+  width: 40%;
+  margin: 30px 0;
+}
+.footer_contacts {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+}
+.footer .contacts-img {
+  padding: 0 5px;
+  cursor: pointer;
+}
+.footer .contacts-img:hover {
+  width: 28px;
+  height: 28px;
 }/*# sourceMappingURL=style.css.map */
