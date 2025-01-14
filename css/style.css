@@ -192,8 +192,8 @@
   color: black;
 }
 .header .input-1 {
-  border-top-left-radius: 10px;
-  border-bottom-left-radius: 10px;
+  border-top-left-radius: 7px;
+  border-bottom-left-radius: 7px;
 }
 .header .input-1:not(:-moz-placeholder-shown) + .lab-1 {
   transform: translateY(-180%);
@@ -261,6 +261,9 @@
   grid-gap: 30px;
   grid-template-areas: "card1 card1 card1 card2 card2 card2" "card3 card3 card3 card3 card4 card4" "card5 card5 card5 card5 card6 card6" "card5 card5 card5 card5 card7 card7";
 }
+.main_card {
+  border-radius: 7px;
+}
 .main_p-title {
   color: black;
   font-weight: bold;
@@ -323,6 +326,52 @@
   padding: 8px 0;
   box-sizing: border-box;
 }
+.main .card4-div1 {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  height: 100%;
+  margin-top: 10px;
+}
+.main .card4-div2 {
+  display: flex;
+  flex-direction: column;
+  width: 70%;
+  height: 100%;
+  margin-top: 10px;
+}
+.main .card4-div3 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 10%;
+  height: 100%;
+  margin-top: 10px;
+}
+.main .card4-div4 {
+  display: flex;
+  flex-direction: column;
+  width: 10%;
+  height: 100%;
+  margin-top: 10px;
+}
+.main .card4-text {
+  color: blue;
+  font-family: Roboto;
+  font-size: 14px;
+  padding: 10px;
+}
+.main .card4-numbers {
+  color: black;
+  font-family: Roboto;
+  font-size: 14px;
+  padding: 10px;
+}
+.main .card4-img {
+  padding: 10px;
+  width: 17px;
+  height: 17px;
+}
 .main .red {
   display: flex;
   justify-content: center;
@@ -343,10 +392,9 @@
   display: flex;
   flex-direction: column;
   grid-area: card1;
-  height: 120px;
+  height: 125px;
   color: gray;
   background-color: white;
-  border-radius: 4px;
   margin-top: 10px;
   box-sizing: border-box;
   position: relative;
@@ -357,10 +405,9 @@
   flex-direction: column;
   justify-content: center;
   grid-area: card2;
-  height: 120px;
+  height: 125px;
   color: gray;
   background-color: white;
-  border-radius: 4px;
   margin-top: 10px;
   box-sizing: border-box;
 }
@@ -373,9 +420,10 @@
   background-color: white;
 }
 .main .card-4 {
+  display: flex;
   width: 100%;
   grid-area: card4;
-  height: 105%;
+  height: 103%;
   background-color: white;
 }
 .main .card-5 {
