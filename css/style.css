@@ -264,12 +264,15 @@
 .main_p-title {
   color: black;
   font-weight: bold;
-  margin: 5px 10px;
+  margin: 10px 10px;
 }
 .main_p-text {
   font-size: 13px;
   margin: 3px 10px;
-  color: gray;
+  color: darkslategray;
+}
+.main .main-title-margin {
+  margin-top: 30px;
 }
 .main_img {
   position: absolute;
@@ -315,7 +318,7 @@
   top: -20px;
 }
 .main_p-card3 {
-  color: black;
+  color: darkslategray;
   margin: 20px 10px;
   padding: 8px 0;
   box-sizing: border-box;

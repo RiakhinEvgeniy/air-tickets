@@ -5,6 +5,7 @@
 
 $redForButton: rgb(217, 53, 53);
 $blueBackground: #6E36F7;
+$forText: darkslategray;
 
 @mixin createLabel($pos) {
     position: absolute;
@@ -258,13 +259,17 @@ $blueBackground: #6E36F7;
     &_p-title {
         color: black;
         font-weight: bold;
-        margin: 5px 10px;
+        margin: 10px 10px;
     }
 
     &_p-text {
         font-size: 13px;
         margin: 3px 10px;
-        color: gray;
+        color: $forText;
+    }
+
+    .main-title-margin {
+        margin-top: 30px;
     }
 
     &_img {
@@ -318,7 +323,7 @@ $blueBackground: #6E36F7;
     }
 
     &_p-card3 {
-        color: black;
+        color: $forText;
         margin: 20px 10px;
         padding: 8px 0;
         box-sizing: border-box;
