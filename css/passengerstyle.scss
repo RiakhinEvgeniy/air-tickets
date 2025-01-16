@@ -1,0 +1,108 @@
+* {
+    margin: 0px;
+    padding: 0px;
+}
+
+body {
+    background-color: aquamarine;
+}
+
+.pass {
+    background-color: white;
+    margin-top: 20px;
+    margin-left: 300px;
+    width: 400px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    // border: 1px solid red;
+    border-radius: 8px;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.600);
+
+    .title-box {
+        color: gray;
+        padding-top: 15px;
+    }
+
+    &_box-text-btns {
+        display: flex;
+        justify-content: space-between;
+        // border: 1px solid green;
+        margin: 20px 0;
+    }
+
+    &_texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40%;
+        // border: 1px solid red;
+    }
+
+    .title {
+        font-weight: bold;
+    }
+
+    .text {
+        color: gray;
+    }
+
+    &_buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        // border: 1px solid yellow;
+        height: 265px;
+    }
+
+    .box-round-btn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .round-btn {
+        width: 40px;
+        height: 40px;
+        border: none;
+        color: gray;
+        box-sizing: border-box;
+        font-size: 25px;
+        text-align: center;
+        border-radius: 50%;
+        padding: 5px;
+        background-color: rgba(211, 211, 211);
+    }
+
+    .group-three-btns {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        // border: 1px solid yellow;
+        margin: 20px 0;
+    }
+
+    .btn-three {
+        width: 80px;
+        height: 36px;
+        font-weight: bold;
+        border: none;
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 18px;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        background-color: rgba(211, 211, 211);
+    }
+
+    .lower-btn {
+        width: 95%;
+        height: 40px;
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 20px 0;
+    }
+}
