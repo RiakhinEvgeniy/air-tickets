@@ -45,7 +45,6 @@ function showCurrMonth(year, month) {
     for (let i = 1; i <= lastDayMonth; i++) {
         if (i === 1) {
             let prevMonthDay = lastDayPrevMonth - firstDayMonth + 1;
-            // console.log(prevMonthDay);
             for (let j = 0; j < firstDayMonth; j++) {
                 let numberOfMonth = document.createElement('div');
                 numberOfMonth.textContent = prevMonthDay;
@@ -58,6 +57,11 @@ function showCurrMonth(year, month) {
         let numberOfMonth = document.createElement('div');
         numberOfMonth.textContent = i;
         numberOfMonth.classList.add('day-name-number');
+        numberOfMonth.addEventListener('click', () => {
+            selectDay(numberOfMonth);
+        });
+
+        allDaysOfMonth.push(numberOfMonth);
         daysOfMonth.append(numberOfMonth);
 
         if (i === lastDayMonth) {
@@ -72,6 +76,37 @@ function showCurrMonth(year, month) {
             }
         }
     }
+}
+
+let counterClickedDays = 0;
+let allDaysOfMonth = [];
+let clickedDays = [];
+let daysSelecteBetweendDays = [];
+
+function selectDay(day) {
+    if (counterClickedDays > 1) {
+        counterClickedDays = 0;
+        clickedDays.forEach(item => item.style.backgroundColor = 'inherit');
+        clickedDays = [];
+        daysSelecteBetweendDays.forEach(item => item.style.backgroundColor = 'inherit');
+        daysSelecteBetweendDays = [];
+    }
+
+    if(clickedDays.length && +day.textContent < +clickedDays[0].textContent) {
+        return
+    }
+
+    clickedDays.push(day);
+
+    if (counterClickedDays === 1) {
+        let firstClickedDay = allDaysOfMonth.indexOf(clickedDays[0]);
+        let lastClickedDay = allDaysOfMonth.indexOf(clickedDays[1]);
+        daysSelecteBetweendDays = allDaysOfMonth.slice(firstClickedDay+1, lastClickedDay);
+        daysSelecteBetweendDays.forEach(item => item.style.backgroundColor = 'green');
+    }
+
+    day.style.backgroundColor = 'red';
+    counterClickedDays++;
 }
 
 function showNamesOfWeek() {
@@ -93,7 +128,7 @@ function showNamesOfWeek() {
 }
 
 function nextMonth() {
-    if(currMonth === 11) {
+    if (currMonth === 11) {
         currMonth = 0;
         currYear++;
     } else {
@@ -106,7 +141,7 @@ function nextMonth() {
 }
 
 function prevMonth() {
-    if(currMonth === 0) {
+    if (currMonth === 0) {
         currMonth = 11;
         currYear--;
     } else {
