@@ -120,7 +120,6 @@ function showNamesOfWeek() {
         nameOfDay.textContent = item;
         nameOfDay.classList.add('day-name-number');
         title.append(nameOfDay);
-        // console.log(nameOfDay);
     })
 
     showCurrYear(currYear, currMonth);
