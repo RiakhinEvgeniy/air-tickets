@@ -53,14 +53,24 @@ body {
 .pass .round-btn {
   width: 40px;
   height: 40px;
-  border: none;
+  border: 1px solid rgba(128, 128, 128, 0.3);
   color: gray;
   box-sizing: border-box;
   font-size: 25px;
   text-align: center;
   border-radius: 50%;
   padding: 5px;
-  background-color: rgb(211, 211, 211);
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.6);
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+.pass .round-btn:hover {
+  background-color: red;
+  color: white;
+}
+.pass .round-btn:active {
+  transform: scale(0.9);
 }
 .pass .group-three-btns {
   width: 80%;
@@ -72,12 +82,22 @@ body {
   width: 80px;
   height: 36px;
   font-weight: bold;
-  border: none;
+  border: 1px solid rgba(128, 128, 128, 0.3);
   border-top-left-radius: 18px;
   border-bottom-left-radius: 18px;
   border-top-right-radius: 18px;
   border-bottom-right-radius: 18px;
-  background-color: rgb(211, 211, 211);
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.6);
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+.pass .btn-three:hover {
+  background-color: red;
+  color: white;
+}
+.pass .btn-three:active {
+  transform: scale(0.9);
 }
 .pass .lower-btn {
   width: 95%;
@@ -89,4 +109,13 @@ body {
   font-weight: bold;
   font-size: 16px;
   margin: 20px 0;
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+.pass .lower-btn:hover {
+  background-color: pink;
+  color: black;
+}
+.pass .lower-btn:active {
+  transform: scale(0.9);
 }/*# sourceMappingURL=passengerstyle.css.map */
