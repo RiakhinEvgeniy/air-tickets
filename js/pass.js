@@ -1,6 +1,32 @@
 const minusBtns = document.querySelectorAll('.minus');
 const plusBtns = document.querySelectorAll('.plus');
 const counters = document.querySelectorAll('.counter');
+const btnUp = document.querySelector('#show-btn');
+const menu = document.querySelector('#pass');
+const btnLower = document.querySelector('#btn-lower');
+
+menu.style.display = 'none'
+
+let isDisplay = false;
+
+btnUp.addEventListener('click', () => {
+    showWindowPassengers();
+})
+
+btnLower.addEventListener('click', () => {
+    menu.style.display = 'none'
+    isDisplay = !isDisplay;
+})
+
+function showWindowPassengers() {
+    if(isDisplay) {
+        menu.style.display = 'none'
+    } else {
+        menu.style.display = 'block'
+    }
+
+    isDisplay = !isDisplay;
+}
 
 minusBtns.forEach((btn) => {
     changeCounter(btn, 'minus');

@@ -5,11 +5,17 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/passengerstyle.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Edu+AU+VIC+WA+NT+Guides:wght@400..700&family=Epilogue:ital,wght@0,100..900;1,100..900&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap"
+        rel="stylesheet">
     <title>Document</title>
 </head>
 
 <body>
-    <div class="pass">
+    <button class="btn-up" type="button" id="show-btn">Show passengers choice</button>
+    <div class="pass" id="pass">
         <p class="title-box">Максимум 9 пассажиров</p>
         <div class="pass_box-text-btns">
             <div class="pass_texts">
@@ -51,7 +57,7 @@
                 <button type="button" class="btn-three">Бизнес</button>
                 <button type="button" class="btn-three">Эконом</button>
             </div>
-            <button type="button" class="lower-btn">OK</button>
+            <button type="button" class="lower-btn" id="btn-lower">OK</button>
         </div>
     </div>
     <script src="./js/pass.js"></script>

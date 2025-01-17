@@ -1,6 +1,7 @@
 .main {
     width: 700px;
     margin: 0 auto;
+    font-family: Roboto;
 }
 
 .calendar {
@@ -14,17 +15,23 @@
 
 .btn {
     width: 20%;
-    height: 25px;
+    height: 30px;
     box-sizing: border-box;
     border: none;
-    border-radius: 8px;
+    border-radius: 5px;
     background-color: green;
     color: white;
     margin: 0;
+    font-family: Roboto;
+    transition: transform 0.05s ease;
     cursor: pointer;
     &:hover {
         background-color: blue;
         color: black;
+    }
+
+    &:active {
+        transform: scale(0.95);
     }
 }
 

@@ -5,6 +5,30 @@
 
 body {
   background-color: aquamarine;
+  font-family: Roboto;
+}
+
+.btn-up {
+  width: 200px;
+  height: 36px;
+  font-weight: bold;
+  margin-left: 300px;
+  border: 1px solid rgba(128, 128, 128, 0.3);
+  border-top-left-radius: 18px;
+  border-bottom-left-radius: 18px;
+  border-top-right-radius: 18px;
+  border-bottom-right-radius: 18px;
+  background-color: white;
+  box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.6);
+  transition: transform 0.1s ease;
+  cursor: pointer;
+}
+.btn-up:hover {
+  background-color: red;
+  color: white;
+}
+.btn-up:active {
+  transform: scale(0.9);
 }
 
 .pass {
@@ -16,6 +40,10 @@ body {
   box-sizing: border-box;
   border-radius: 8px;
   box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.6);
+}
+.pass .counter {
+  font-weight: bold;
+  font-size: 18px;
 }
 .pass .title-box {
   color: gray;

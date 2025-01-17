@@ -24,6 +24,7 @@ const daysOfWeek = [
 ];
 
 let date = new Date();
+console.log(date)
 let currDay = date.getDay();
 let currMonth = date.getMonth();
 let currYear = date.getFullYear();
