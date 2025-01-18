@@ -251,39 +251,44 @@ $forText: darkslategray;
 
     .calendar-in-input {
         position: absolute;
-        top: 34px;
+        top: 32px;
         left: 1000px;
         cursor: pointer;
         transition: transform 0.1s ease;
-        &:active {
+
+        &:hover {
             transform: scale(1.2);
         }
     }
 
     .calendar-box {
         display: flex;
+        // position: relative;
         width: 800px;
+        height: 350px;
         margin: 0 auto;
         border-radius: 7px;
         font-family: Roboto;
         color: black;
         position: absolute;
         z-index: 100;
-        background-color: white;
+        background-color: rgb(224, 211, 213);
         top: 321px;
+        box-shadow: 8px 4px 4px rgba(128, 128, 128, 0.600);
+        align-content: space-between;
     }
-    
+
     // .calendar {
     //     border: 1px solid red;
     //     height: 300px;
     // }
-    
+
     .btn-div {
         display: flex;
         justify-content: space-around;
         margin-top: 5px;
     }
-    
+
     .btn {
         width: 20%;
         height: 30px;
@@ -296,28 +301,48 @@ $forText: darkslategray;
         font-family: Roboto;
         transition: transform 0.05s ease;
         cursor: pointer;
+
         &:hover {
             background-color: blue;
             color: black;
         }
-    
+
         &:active {
             transform: scale(0.95);
         }
     }
-    
+
+    .box-btn-close {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 15px;
+        position: absolute;
+        left: 0;
+        bottom: 10px;
+        width: 100%;
+        // border: 1px solid red;
+    }
+
+    .btn-close {
+        width: 160px;
+        background-color: $blueBackground;
+        &:hover {
+            background-color: green;
+        }
+    }
+
     .month {
         text-align: center;
         box-sizing: border-box;
         color: red;
         font-weight: bold;
     }
-    
+
     .daysTitle {
         display: flex;
         width: 100%;
     }
-    
+
     .day-name-number {
         width: calc(100% / 7);
         box-sizing: border-box;
@@ -325,17 +350,17 @@ $forText: darkslategray;
         padding: 5px;
         cursor: pointer;
     }
-    
+
     .days {
         display: flex;
         flex-wrap: wrap;
         font-weight: bold;
     }
-    
+
     .inactive {
         color: gray;
         font-weight: normal;
-    }    
+    }
 }
 
 .main {

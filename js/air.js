@@ -20,7 +20,7 @@ const daysOfWeek = [
     'Чт',
     'Пт',
     'Сб',
-    'Вн'
+    'Вс'
 ];
 
 let date = new Date();
@@ -36,13 +36,20 @@ function elementByID(id) {
 
 const boxCalendar = elementByID('calendar-box');
 const btnShowCalendar = elementByID('img-cal');
+const btnCloseCalendar = elementByID('btn-close');
+const btnClearCalendar = elementByID('btn-clear');
+
+let isDisplayCalendar = true;
 
 boxCalendar.style.display = 'none';
 btnShowCalendar.addEventListener('click', () => {
     showWindowCalendar();
 })
 
-let isDisplayCalendar = true;
+btnCloseCalendar.addEventListener('click', () => {
+    boxCalendar.style.display = 'none';
+    isDisplayCalendar = !isDisplayCalendar;
+})
 
 function showWindowCalendar() {
     if(isDisplayCalendar) {
@@ -123,7 +130,7 @@ function selectDay(day) {
         let firstClickedDay = allDaysOfMonth.indexOf(clickedDays[0]);
         let lastClickedDay = allDaysOfMonth.indexOf(clickedDays[1]);
         daysSelecteBetweendDays = allDaysOfMonth.slice(firstClickedDay+1, lastClickedDay);
-        daysSelecteBetweendDays.forEach(item => item.style.backgroundColor = 'green');
+        daysSelecteBetweendDays.forEach(item => {item.style.backgroundColor = 'red'});
     }
 
     day.style.backgroundColor = 'red';
@@ -160,6 +167,15 @@ function nextMonth() {
     showCurrMonth(currYear, currMonth);
 }
 
+function clearSelectDay() {
+    clickedDays.forEach(item => item.style.backgroundColor = 'inherit');
+    daysSelecteBetweendDays.forEach(item => item.style.backgroundColor = 'inherit');
+}
+
+btnClearCalendar.addEventListener('click', () => {
+    clearSelectDay();
+})
+
 function prevMonth() {
     if (currMonth === 0) {
         currMonth = 11;
@@ -171,6 +187,7 @@ function prevMonth() {
     elementByID('days').innerHTML = '';
     showCurrYear(currYear, currMonth);
     showCurrMonth(currYear, currMonth);
+    // clearSelectDay();
 }
 
 showNamesOfWeek();
