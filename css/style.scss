@@ -35,6 +35,20 @@ $forText: darkslategray;
     margin-top: 10px;
 }
 
+@mixin clickHoverButtons($backgroundColorBtn, $colorTextBtn) {
+    transition: transrorm 0.1s ease;
+    cursor: pointer;
+
+    &:hover {
+        background-color: $backgroundColorBtn;
+        color: $colorTextBtn;
+    }
+
+    &:active {
+        transform: scale(0.95);
+    }
+}
+
 .wrapper {
     width: 1200px;
     font-family: Roboto;
@@ -50,7 +64,6 @@ $forText: darkslategray;
     height: 450px;
 
     &_box {
-        // border: 1px solid black;
         display: flex;
         flex-direction: column;
     }
@@ -65,7 +78,6 @@ $forText: darkslategray;
         left: 42%;
         margin-top: 15px;
         margin-bottom: 25px;
-        // border: 1px solid red;
     }
 
     &_p {
@@ -124,13 +136,8 @@ $forText: darkslategray;
         border-top-right-radius: 20px;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
-        cursor: pointer;
         font-weight: bold;
-
-        &:hover {
-            background-color: white;
-            color: black;
-        }
+        @include clickHoverButtons(white, black)
     }
 
     .chapter-hotel {
@@ -209,12 +216,7 @@ $forText: darkslategray;
         margin: 10px 10px;
         border: none;
         border-radius: 10px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: white;
-            color: black;
-        }
+        @include clickHoverButtons(white, black);
     }
 
     .input-1 {
@@ -243,8 +245,97 @@ $forText: darkslategray;
         border-left: 1px solid lightgray;
         border-top-right-radius: 10px;
         border-bottom-right-radius: 10px;
+        position: relative;
         @include focusAndNotPlaceholderForInput(".lab-4");
     }
+
+    .calendar-in-input {
+        position: absolute;
+        top: 34px;
+        left: 1000px;
+        cursor: pointer;
+        transition: transform 0.1s ease;
+        &:active {
+            transform: scale(1.2);
+        }
+    }
+
+    .calendar-box {
+        display: flex;
+        width: 800px;
+        margin: 0 auto;
+        border-radius: 7px;
+        font-family: Roboto;
+        color: black;
+        position: absolute;
+        z-index: 100;
+        background-color: white;
+        top: 321px;
+    }
+    
+    // .calendar {
+    //     border: 1px solid red;
+    //     height: 300px;
+    // }
+    
+    .btn-div {
+        display: flex;
+        justify-content: space-around;
+        margin-top: 5px;
+    }
+    
+    .btn {
+        width: 20%;
+        height: 30px;
+        box-sizing: border-box;
+        border: none;
+        border-radius: 5px;
+        background-color: green;
+        color: white;
+        margin: 0;
+        font-family: Roboto;
+        transition: transform 0.05s ease;
+        cursor: pointer;
+        &:hover {
+            background-color: blue;
+            color: black;
+        }
+    
+        &:active {
+            transform: scale(0.95);
+        }
+    }
+    
+    .month {
+        text-align: center;
+        box-sizing: border-box;
+        color: red;
+        font-weight: bold;
+    }
+    
+    .daysTitle {
+        display: flex;
+        width: 100%;
+    }
+    
+    .day-name-number {
+        width: calc(100% / 7);
+        box-sizing: border-box;
+        text-align: center;
+        padding: 5px;
+        cursor: pointer;
+    }
+    
+    .days {
+        display: flex;
+        flex-wrap: wrap;
+        font-weight: bold;
+    }
+    
+    .inactive {
+        color: gray;
+        font-weight: normal;
+    }    
 }
 
 .main {
@@ -299,12 +390,7 @@ $forText: darkslategray;
         margin-top: 12px;
         margin-left: 10px;
         font-family: Roboto;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $blueBackground;
-            color: white;
-        }
+        @include clickHoverButtons($blueBackground, white)
     }
 
     &_btn-card2 {
@@ -317,12 +403,7 @@ $forText: darkslategray;
         height: 30px;
         margin-left: 10px;
         margin-top: 15px;
-        cursor: pointer;
-
-        &:hover {
-            background-color: $blueBackground;
-            color: white;
-        }
+        @include clickHoverButtons($blueBackground, white)
     }
 
     &_img-bus {
@@ -395,6 +476,7 @@ $forText: darkslategray;
 
     .text-active {
         cursor: pointer;
+
         &:hover {
             color: $blueBackground;
             font-weight: bold;
@@ -432,10 +514,7 @@ $forText: darkslategray;
         height: 30px;
         border: none;
         color: white;
-        cursor: pointer;
-        &:hover {
-            background-color: $blueBackground;
-        }
+        @include clickHoverButtons($blueBackground, white)
     }
 
     .card-1 {
@@ -542,6 +621,7 @@ $forText: darkslategray;
         font-size: 13px;
         padding: 9px 0;
         cursor: pointer;
+
         &:hover {
             font-weight: bold;
         }
@@ -569,6 +649,7 @@ $forText: darkslategray;
         padding: 10px;
         font-size: 13px;
         cursor: pointer;
+
         &:hover {
             font-weight: bold;
         }
@@ -593,6 +674,7 @@ $forText: darkslategray;
     .contacts-img {
         padding: 0 5px;
         cursor: pointer;
+
         &:hover {
             width: 28px;
             height: 28px;

@@ -57,12 +57,24 @@
 
                 <input class="header_input input-4" id="4" type="text" placeholder=" ">
                 <label class="lab lab-4" for="4">Пассажиры, класс</label>
+                <img class="calendar-in-input" id="img-cal" src="./img/calendar.png" alt="calendar" width="25px" height="25px">
 
                 <button class="button-in-header" type="button">Найти</button>
             </div>
             <div class="header_rote">
                 <img src="./img/direction.png" alt="rote" width="23px" height="23px">
                 <p>Сложный маршрут</p>
+            </div>
+            <div class="calendar-box" id="calendar-box">
+                <div class="calendar" id="calendar">
+                    <div class="btn-div">
+                        <button class="btn" type="button" id="prev">Пред.</button>
+                        <button class="btn" type="button" id="next">След.</button>
+                    </div>
+                    <div class="month" id="month"></div>
+                    <div class="daysTitle" id="daysTitle"></div>
+                    <div class="days" id="days"></div>
+                </div>
             </div>
         </div>
     </header>
@@ -324,6 +336,6 @@
             </div>
         </div>
     </footer>
+    <script src="./js/air.js"></script>
 </body>
-
 </html>

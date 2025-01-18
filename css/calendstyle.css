@@ -1,4 +1,7 @@
-.main {
+.calendar-box {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
   width: 700px;
   margin: 0 auto;
   font-family: Roboto;
@@ -6,6 +9,7 @@
 
 .calendar {
   border: 1px solid red;
+  background-color: pink;
 }
 
 .btn-div {
@@ -32,6 +36,10 @@
 }
 .btn:active {
   transform: scale(0.95);
+}
+
+.btn-cal {
+  margin: 20px;
 }
 
 .month {

@@ -79,12 +79,16 @@
   border-top-right-radius: 20px;
   border-bottom-right-radius: 20px;
   border-bottom-left-radius: 20px;
-  cursor: pointer;
   font-weight: bold;
+  transition: transrorm 0.1s ease;
+  cursor: pointer;
 }
 .header .chapter:hover {
   background-color: white;
   color: black;
+}
+.header .chapter:active {
+  transform: scale(0.95);
 }
 .header .chapter-hotel {
   display: flex;
@@ -185,11 +189,15 @@
   margin: 10px 10px;
   border: none;
   border-radius: 10px;
+  transition: transrorm 0.1s ease;
   cursor: pointer;
 }
 .header .button-in-header:hover {
   background-color: white;
   color: black;
+}
+.header .button-in-header:active {
+  transform: scale(0.95);
 }
 .header .input-1 {
   border-top-left-radius: 7px;
@@ -241,6 +249,7 @@
   border-left: 1px solid lightgray;
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
+  position: relative;
 }
 .header .input-4:not(:-moz-placeholder-shown) + .lab-4 {
   transform: translateY(-180%);
@@ -249,6 +258,79 @@
 .header .input-4:focus + .lab-4, .header .input-4:not(:placeholder-shown) + .lab-4 {
   transform: translateY(-180%);
   font-size: 12px;
+}
+.header .calendar-in-input {
+  position: absolute;
+  top: 34px;
+  left: 1000px;
+  cursor: pointer;
+  transition: transform 0.1s ease;
+}
+.header .calendar-in-input:active {
+  transform: scale(1.2);
+}
+.header .calendar-box {
+  display: flex;
+  width: 800px;
+  margin: 0 auto;
+  border-radius: 7px;
+  font-family: Roboto;
+  color: black;
+  position: absolute;
+  z-index: 100;
+  background-color: white;
+  top: 321px;
+}
+.header .btn-div {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 5px;
+}
+.header .btn {
+  width: 20%;
+  height: 30px;
+  box-sizing: border-box;
+  border: none;
+  border-radius: 5px;
+  background-color: green;
+  color: white;
+  margin: 0;
+  font-family: Roboto;
+  transition: transform 0.05s ease;
+  cursor: pointer;
+}
+.header .btn:hover {
+  background-color: blue;
+  color: black;
+}
+.header .btn:active {
+  transform: scale(0.95);
+}
+.header .month {
+  text-align: center;
+  box-sizing: border-box;
+  color: red;
+  font-weight: bold;
+}
+.header .daysTitle {
+  display: flex;
+  width: 100%;
+}
+.header .day-name-number {
+  width: 14.2857142857%;
+  box-sizing: border-box;
+  text-align: center;
+  padding: 5px;
+  cursor: pointer;
+}
+.header .days {
+  display: flex;
+  flex-wrap: wrap;
+  font-weight: bold;
+}
+.header .inactive {
+  color: gray;
+  font-weight: normal;
 }
 
 .main {
@@ -293,11 +375,15 @@
   margin-top: 12px;
   margin-left: 10px;
   font-family: Roboto;
+  transition: transrorm 0.1s ease;
   cursor: pointer;
 }
 .main_btn-card1:hover {
   background-color: #6E36F7;
   color: white;
+}
+.main_btn-card1:active {
+  transform: scale(0.95);
 }
 .main_btn-card2 {
   background-color: rgb(217, 53, 53);
@@ -309,11 +395,15 @@
   height: 30px;
   margin-left: 10px;
   margin-top: 15px;
+  transition: transrorm 0.1s ease;
   cursor: pointer;
 }
 .main_btn-card2:hover {
   background-color: #6E36F7;
   color: white;
+}
+.main_btn-card2:active {
+  transform: scale(0.95);
 }
 .main_img-bus {
   position: absolute;
@@ -425,10 +515,15 @@
   height: 30px;
   border: none;
   color: white;
+  transition: transrorm 0.1s ease;
   cursor: pointer;
 }
 .main .card7-btn:hover {
   background-color: #6E36F7;
+  color: white;
+}
+.main .card7-btn:active {
+  transform: scale(0.95);
 }
 .main .card-1 {
   display: flex;

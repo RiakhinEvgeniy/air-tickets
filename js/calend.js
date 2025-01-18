@@ -34,6 +34,26 @@ function elementByID(id) {
     return document.getElementById(id);
 }
 
+const boxCalendar = elementByID('calendar');
+const btnShowCalendar = elementByID('calendar-show');
+
+boxCalendar.style.display = 'none';
+btnShowCalendar.addEventListener('click', () => {
+    showWindowCalendar();
+})
+
+let isDisplayCalendar = true;
+
+function showWindowCalendar() {
+    if(isDisplayCalendar) {
+        boxCalendar.style.display = 'block';
+        
+    } else {
+        boxCalendar.style.display = 'none';
+    }
+    isDisplayCalendar = !isDisplayCalendar;
+}
+
 function showCurrYear(year, month) {
     elementByID('month').textContent = `${months[month]} ${year}`
 }
@@ -93,7 +113,7 @@ function selectDay(day) {
         daysSelecteBetweendDays = [];
     }
 
-    if(clickedDays.length && +day.textContent < +clickedDays[0].textContent) {
+    if (clickedDays.length && +day.textContent < +clickedDays[0].textContent) {
         return
     }
 
@@ -102,7 +122,7 @@ function selectDay(day) {
     if (counterClickedDays === 1) {
         let firstClickedDay = allDaysOfMonth.indexOf(clickedDays[0]);
         let lastClickedDay = allDaysOfMonth.indexOf(clickedDays[1]);
-        daysSelecteBetweendDays = allDaysOfMonth.slice(firstClickedDay+1, lastClickedDay);
+        daysSelecteBetweendDays = allDaysOfMonth.slice(firstClickedDay + 1, lastClickedDay);
         daysSelecteBetweendDays.forEach(item => item.style.backgroundColor = 'green');
     }
 
