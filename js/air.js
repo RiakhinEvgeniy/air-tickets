@@ -42,6 +42,7 @@ const btnClearCalendar = elementByID('btn-clear');
 let isDisplayCalendar = true;
 
 boxCalendar.style.display = 'none';
+
 btnShowCalendar.addEventListener('click', () => {
     showWindowCalendar();
 })
@@ -51,10 +52,13 @@ btnCloseCalendar.addEventListener('click', () => {
     isDisplayCalendar = !isDisplayCalendar;
 })
 
+btnClearCalendar.addEventListener('click', () => {
+    clearSelectDay();
+})
+
 function showWindowCalendar() {
-    if(isDisplayCalendar) {
+    if (isDisplayCalendar) {
         boxCalendar.style.display = 'block';
-        
     } else {
         boxCalendar.style.display = 'none';
     }
@@ -120,7 +124,7 @@ function selectDay(day) {
         daysSelecteBetweendDays = [];
     }
 
-    if(clickedDays.length && +day.textContent < +clickedDays[0].textContent) {
+    if (clickedDays.length && +day.textContent < +clickedDays[0].textContent) {
         return
     }
 
@@ -129,8 +133,8 @@ function selectDay(day) {
     if (counterClickedDays === 1) {
         let firstClickedDay = allDaysOfMonth.indexOf(clickedDays[0]);
         let lastClickedDay = allDaysOfMonth.indexOf(clickedDays[1]);
-        daysSelecteBetweendDays = allDaysOfMonth.slice(firstClickedDay+1, lastClickedDay);
-        daysSelecteBetweendDays.forEach(item => {item.style.backgroundColor = 'red'});
+        daysSelecteBetweendDays = allDaysOfMonth.slice(firstClickedDay + 1, lastClickedDay);
+        daysSelecteBetweendDays.forEach(item => { item.style.backgroundColor = 'red' });
     }
 
     day.style.backgroundColor = 'red';
@@ -171,10 +175,6 @@ function clearSelectDay() {
     clickedDays.forEach(item => item.style.backgroundColor = 'inherit');
     daysSelecteBetweendDays.forEach(item => item.style.backgroundColor = 'inherit');
 }
-
-btnClearCalendar.addEventListener('click', () => {
-    clearSelectDay();
-})
 
 function prevMonth() {
     if (currMonth === 0) {
