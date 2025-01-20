@@ -55,8 +55,8 @@
                     <pre>|     Обратно</pre>
                 </label>
 
-                <input class="header_input input-4" id="4" type="text" placeholder=" ">
-                <label class="lab lab-4" for="4">Пассажиры, класс</label>
+                <input class="header_input input-4" name="input4" id="input4" type="text" placeholder=" " maxlength="19">
+                <label class="lab lab-4" for="input4">Пассажиры, класс</label>
                 <img class="calendar-in-input" id="img-cal" src="./img/calendar.png" alt="calendar" width="30px"
                     height="30px">
 
@@ -66,6 +66,7 @@
                 <img src="./img/direction.png" alt="rote" width="23px" height="23px">
                 <p>Сложный маршрут</p>
             </div>
+
             <div class="calendar-box" id="calendar-box">
                 <div class="calendar" id="calendar">
                     <div class="btn-div">
@@ -82,6 +83,53 @@
                 </div>
             </div>
         </div>
+
+        <div class="pass" id="pass">
+            <p class="title-box">Максимум 9 пассажиров</p>
+            <div class="pass_box-text-btns">
+                <div class="pass_texts">
+                    <div>
+                        <p class="title">Взрослые</p>
+                        <p class="text">старше 12 лет</p>
+                    </div>
+                    <div>
+                        <p class="title">Дети</p>
+                        <p class="text">2-12 лет</p>
+                    </div>
+                    <div>
+                        <p class="title">Младенцы</p>
+                        <p class="text">до 2 лет</p>
+                    </div>
+                </div>
+                <div class="pass_buttons">
+                    <div class="box-round-btn">
+                        <button type="button" class="round-btn minus" data-id="0">-</button>
+                        <span class="counter" data-id="0">0</span>
+                        <button type="button" class="round-btn plus" data-id="0">+</button>
+                    </div>
+                    <div class="box-round-btn">
+                        <button type="button" class="round-btn minus" data-id="1">-</button>
+                        <span class="counter" data-id="1">0</span>
+                        <button type="button" class="round-btn plus" data-id="1">+</button>
+                    </div>
+                    <div class="box-round-btn">
+                        <button type="button" class="round-btn minus" data-id="2">-</button>
+                        <span class="counter" data-id="2">0</span>
+                        <button type="button" class="round-btn plus" data-id="2">+</button>
+                    </div>
+                </div>
+            </div>
+            <div class="pass_box-btns">
+                <p class="title">Класс</p>
+                <div class="group-three-btns">
+                    <button type="button" class="btn-three">Любой</button>
+                    <button type="button" class="btn-three">Бизнес</button>
+                    <button type="button" class="btn-three">Эконом</button>
+                </div>
+                <button type="button" class="lower-btn" id="btn-close-pass">Закрыть</button>
+            </div>
+        </div>
+
     </header>
     <main class="main">
         <div class="main_box-grid wrapper">
