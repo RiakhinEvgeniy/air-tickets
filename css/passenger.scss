@@ -1,0 +1,138 @@
+.pass {
+    background-color: rgb(224, 211, 213);
+    margin-top: 20px;
+    margin-left: 300px;
+    width: 400px;
+    padding: 0 15px;
+    box-sizing: border-box;
+    border-radius: 8px;
+    position: absolute;
+    z-index: 10;
+    left: 530px;
+    top: 305px;
+    box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.600);
+
+    .counter {
+        font-weight: bold;
+        font-size: 18px;
+    }
+
+    .title-box {
+        color: gray;
+        padding-top: 15px;
+    }
+
+    &_box-text-btns {
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    &_texts {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 40%;
+    }
+
+    .title {
+        font-weight: bold;
+    }
+
+    .text {
+        color: gray;
+    }
+
+    &_buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-around;
+        width: 50%;
+        height: 265px;
+    }
+
+    .box-round-btn {
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+    }
+
+    .round-btn {
+        width: 40px;
+        height: 40px;
+        border: 1px solid rgba(128, 128, 128, 0.300);
+        color: gray;
+        box-sizing: border-box;
+        font-size: 25px;
+        text-align: center;
+        border-radius: 50%;
+        padding: 5px;
+        background-color: white;
+        box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.600);
+        transition: transform 0.1s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: red;
+            color: white;
+        }
+
+        &:active {
+            transform: scale(0.90);
+        }
+    }
+
+    .group-three-btns {
+        width: 80%;
+        display: flex;
+        justify-content: space-between;
+        margin: 20px 0;
+    }
+
+    .btn-three {
+        width: 80px;
+        height: 36px;
+        font-weight: bold;
+        border: 1px solid rgba(128, 128, 128, 0.300);
+        border-top-left-radius: 18px;
+        border-bottom-left-radius: 18px;
+        border-top-right-radius: 18px;
+        border-bottom-right-radius: 18px;
+        background-color: white;
+        box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.600);
+        transition: transform 0.1s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: red;
+            color: white;
+        }
+
+        &:active {
+            transform: scale(0.90);
+        }
+    }
+
+    .lower-btn {
+        width: 95%;
+        height: 40px;
+        background-color: red;
+        border: none;
+        border-radius: 5px;
+        color: white;
+        font-weight: bold;
+        font-size: 16px;
+        margin: 20px 0;
+        transition: transform 0.1s ease;
+        cursor: pointer;
+
+        &:hover {
+            background-color: pink;
+            color: black;
+        }
+
+        &:active {
+            transform: scale(0.90);
+        }
+    }
+}

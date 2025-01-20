@@ -57,15 +57,29 @@ $forText: darkslategray;
     color: white;
     font-size: 16px;
     margin: 0 auto;
+
+    @media (max-width: 500px) {
+        width: 100%;
+        padding-left: 12px;
+    }
 }
 
 .header {
     background-color: $blueBackground;
     height: 450px;
 
+    @media (max-width: 500px) {
+        width: 100%;
+        height: auto;
+    }
+
     &_box {
         display: flex;
         flex-direction: column;
+
+        @media (max-width: 500px) {
+            width: 100%;
+        }
     }
 
     &_box-roof {
@@ -78,6 +92,12 @@ $forText: darkslategray;
         left: 42%;
         margin-top: 15px;
         margin-bottom: 25px;
+
+        @media (max-width: 500px) {
+            width: 90%;
+            left: 0;
+            justify-content: end;
+        }
     }
 
     &_p {
@@ -85,6 +105,10 @@ $forText: darkslategray;
 
         &:hover {
             color: black;
+        }
+
+        @media (max-width: 500px) {
+            display: none;
         }
     }
 
@@ -106,6 +130,10 @@ $forText: darkslategray;
         &:hover {
             color: black;
         }
+
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
 
     .option {
@@ -125,6 +153,10 @@ $forText: darkslategray;
         width: 70%;
         // border: 1px solid red;
         margin: 10px 0;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
     }
 
     .chapter {
@@ -137,7 +169,11 @@ $forText: darkslategray;
         border-bottom-right-radius: 20px;
         border-bottom-left-radius: 20px;
         font-weight: bold;
-        @include clickHoverButtons(white, black)
+        @include clickHoverButtons(white, black);
+
+        @media (max-width: 500px) {
+            margin: 5px 0;
+        }
     }
 
     .chapter-hotel {
@@ -162,6 +198,10 @@ $forText: darkslategray;
     &_box-input {
         position: relative;
         display: flex;
+
+        @media (max-width: 500px) {
+            flex-direction: column;
+        }
     }
 
     &_rote {
@@ -173,24 +213,49 @@ $forText: darkslategray;
 
     .lab-1 {
         @include createLabel("10px");
+
+        @media (max-width: 500px) {
+            top: 10%;
+            left: 25px;
+        }
     }
 
     .lab-2 {
         @include createLabel("280px");
         left: 280px;
 
+        @media (max-width: 500px) {
+            top: 28%;
+            left: 25px;
+        }
     }
 
     .lab-3 {
         @include createLabel("545px");
+
+        @media (max-width: 500px) {
+            top: 47%;
+            left: 25px;
+        }
     }
 
     .lab-3-1 {
         @include createLabel("650px");
+
+        @media (max-width: 500px) {
+            display: none;
+            top: 50%;
+            left: 25px;
+        }
     }
 
     .lab-4 {
         @include createLabel("815px");
+
+        @media (max-width: 500px) {
+            top: 66%;
+            left: 25px;
+        }
     }
 
     &_input {
@@ -203,6 +268,11 @@ $forText: darkslategray;
         font-family: Roboto;
         font-size: 16px;
         font-weight: bold;
+
+        @media (max-width: 500px) {
+            width: 95%;
+            margin: 0px;
+        }
     }
 
     .button-in-header {
@@ -217,28 +287,53 @@ $forText: darkslategray;
         border: none;
         border-radius: 10px;
         @include clickHoverButtons(white, black);
+
+        @media (max-width: 500px) {
+            width: 95%;
+            margin: 10px 0;
+        }
     }
 
     .input-1 {
         border-top-left-radius: 7px;
         border-bottom-left-radius: 7px;
         @include focusAndNotPlaceholderForInput(".lab-1");
+
+        @media (max-width: 500px) {
+            border-bottom-left-radius: 0;
+            border-top-right-radius: 7px;
+        }
     }
 
     .input-2 {
         border-left: 1px solid lightgray;
         @include focusAndNotPlaceholderForInput(".lab-2");
+
+        @media (max-width: 500px) {
+            border-bottom: none;
+            border-top: lightgray;
+        }
     }
 
     .input-3 {
         border-left: 1px solid lightgray;
         width: 133px;
         @include focusAndNotPlaceholderForInput(".lab-3");
+
+        @media (max-width: 500px) {
+            width: 95%;
+            border-bottom: 1px solid lightgray;
+        }
     }
 
     .input-3-1 {
         width: 133px;
         @include focusAndNotPlaceholderForInput(".lab-3-1");
+
+        @media (max-width: 500px) {
+            display: none;
+            width: 95%;
+        }
     }
 
     .input-4 {
@@ -247,9 +342,14 @@ $forText: darkslategray;
         border-bottom-right-radius: 10px;
         position: relative;
         @include focusAndNotPlaceholderForInput(".lab-4");
+
+        @media (max-width: 500px) {
+            border-top-right-radius: 0;
+            border-bottom-left-radius: 7px;
+        }
     }
 
-    .calendar-in-input {
+    .calendar-in-input-img {
         position: absolute;
         top: 32px;
         left: 1022px;
@@ -260,11 +360,15 @@ $forText: darkslategray;
         &:hover {
             transform: scale(1.3);
         }
+
+        @media (max-width: 500px) {
+            left: 420px;
+            top: 62%;
+        }
     }
 
     .calendar-box {
         display: flex;
-        // position: relative;
         width: 800px;
         height: 350px;
         margin: 0 auto;
@@ -278,11 +382,6 @@ $forText: darkslategray;
         box-shadow: 8px 4px 4px rgba(128, 128, 128, 0.600);
         align-content: space-between;
     }
-
-    // .calendar {
-    //     border: 1px solid red;
-    //     height: 300px;
-    // }
 
     .btn-div {
         display: flex;
@@ -321,12 +420,12 @@ $forText: darkslategray;
         left: 0;
         bottom: 10px;
         width: 100%;
-        // border: 1px solid red;
     }
 
     .btn-close {
         width: 160px;
         background-color: $blueBackground;
+
         &:hover {
             background-color: green;
         }
@@ -362,146 +461,6 @@ $forText: darkslategray;
         color: gray;
         font-weight: normal;
     }
-    
-    .pass {
-        background-color: rgb(224, 211, 213);
-        margin-top: 20px;
-        margin-left: 300px;
-        width: 400px;
-        padding: 0 15px;
-        box-sizing: border-box;
-        border-radius: 8px;
-        position: absolute;
-        z-index: 10;
-        left: 530px;
-        top: 305px;
-        box-shadow: 5px 5px 5px rgba(128, 128, 128, 0.600);
-    
-        .counter {
-            font-weight: bold;
-            font-size: 18px;
-        }
-    
-        .title-box {
-            color: gray;
-            padding-top: 15px;
-        }
-    
-        &_box-text-btns {
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-    
-        &_texts {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 40%;
-        }
-    
-        .title {
-            font-weight: bold;
-        }
-    
-        .text {
-            color: gray;
-        }
-    
-        &_buttons {
-            display: flex;
-            flex-direction: column;
-            justify-content: space-around;
-            width: 50%;
-            height: 265px;
-        }
-    
-        .box-round-btn {
-            display: flex;
-            justify-content: space-around;
-            align-items: center;
-        }
-    
-        .round-btn {
-            width: 40px;
-            height: 40px;
-            border: 1px solid rgba(128, 128, 128, 0.300);
-            color: gray;
-            box-sizing: border-box;
-            font-size: 25px;
-            text-align: center;
-            border-radius: 50%;
-            padding: 5px;
-            // background-color: rgba(211, 211, 211);
-            background-color: white;
-            box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.600);
-            transition: transform 0.1s ease;
-            cursor: pointer;
-    
-            &:hover {
-                background-color: red;
-                color: white;
-            }
-    
-            &:active {
-                transform: scale(0.90);
-            }
-        }
-    
-        .group-three-btns {
-            width: 80%;
-            display: flex;
-            justify-content: space-between;
-            margin: 20px 0;
-        }
-    
-        .btn-three {
-            width: 80px;
-            height: 36px;
-            font-weight: bold;
-            border: 1px solid rgba(128, 128, 128, 0.300);
-            border-top-left-radius: 18px;
-            border-bottom-left-radius: 18px;
-            border-top-right-radius: 18px;
-            border-bottom-right-radius: 18px;
-            background-color: white;
-            box-shadow: 2px 2px 2px rgba(128, 128, 128, 0.600);
-            transition: transform 0.1s ease;
-            cursor: pointer;
-    
-            &:hover {
-                background-color: red;
-                color: white;
-            }
-    
-            &:active {
-                transform: scale(0.90);
-            }
-        }
-    
-        .lower-btn {
-            width: 95%;
-            height: 40px;
-            background-color: red;
-            border: none;
-            border-radius: 5px;
-            color: white;
-            font-weight: bold;
-            font-size: 16px;
-            margin: 20px 0;
-            transition: transform 0.1s ease;
-            cursor: pointer;
-    
-            &:hover {
-                background-color: pink;
-                color: black;
-            }
-    
-            &:active {
-                transform: scale(0.90);
-            }
-        }
-    }
 }
 
 .main {
@@ -517,10 +476,19 @@ $forText: darkslategray;
             "card3 card3 card3 card3 card4 card4"
             "card5 card5 card5 card5 card6 card6"
             "card5 card5 card5 card5 card7 card7";
+
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &_card {
         border-radius: 7px;
+
+        @media (max-width: 500px) {
+            width: 95%;
+        }
     }
 
     &_p-title {
@@ -576,6 +544,12 @@ $forText: darkslategray;
         position: absolute;
         right: 0px;
         top: -20px;
+
+        @media (max-width: 500px) {
+            width: 100px;
+            height: 100px;
+            top: 50px;
+        }
     }
 
     &_p-card3 {
