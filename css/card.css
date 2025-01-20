@@ -1,0 +1,50 @@
+.box-for-div {
+  background-color: lightgrey;
+  border: 1px solid red;
+  width: 50%;
+  display: flex;
+  font-family: Roboto;
+  color: darkslategray;
+}
+@media (max-width: 500px) {
+  .box-for-div {
+    flex-direction: column;
+  }
+}
+
+.div-span {
+  display: flex;
+  justify-content: space-between;
+  margin: 20px 5px;
+  width: 95%;
+}
+@media (max-width: 500px) {
+  .div-span {
+    display: flex;
+    flex-direction: column;
+  }
+}
+
+.red {
+  color: red;
+}
+
+.div1 {
+  width: 49%;
+  margin: 5px;
+}
+@media (max-width: 500px) {
+  .div1 {
+    width: 95%;
+  }
+}
+
+.div2 {
+  width: 49%;
+  margin: 5px;
+}
+@media (max-width: 500px) {
+  .div2 {
+    width: 95%;
+  }
+}/*# sourceMappingURL=card.css.map */
