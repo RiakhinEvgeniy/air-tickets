@@ -151,7 +151,6 @@ $forText: darkslategray;
         display: flex;
         justify-content: space-between;
         width: 70%;
-        // border: 1px solid red;
         margin: 10px 0;
 
         @media (max-width: 500px) {
@@ -488,6 +487,7 @@ $forText: darkslategray;
 
         @media (max-width: 500px) {
             width: 95%;
+            gap: 5px;
         }
     }
 
@@ -712,6 +712,10 @@ $forText: darkslategray;
         background-color: white;
         margin-top: 20px;
         margin-bottom: 70px;
+
+        @media (max-width: 500px) {
+            margin-bottom: 5px;
+        }
     }
 
     .card-6 {
@@ -722,6 +726,11 @@ $forText: darkslategray;
         grid-area: card6;
         background-color: white;
         height: 70%;
+
+        @media (max-width: 500px) {
+            margin-top: 5px;
+            height: 49%;
+        }
     }
 
     .card-7 {
@@ -730,6 +739,11 @@ $forText: darkslategray;
         height: 220px;
         margin-top: -100px;
         box-sizing: border-box;
+
+        @media (max-width: 500px) {
+            margin-top: 5px;
+            height: 52%;
+        }
     }
 }
 
@@ -748,12 +762,16 @@ $forText: darkslategray;
     &_container-info {
         display: flex;
         justify-content: space-between;
+
+        @media (max-width: 500px) {
+            display: flex;
+            flex-direction: column;
+        }
     }
 
     &_info {
         display: flex;
         flex-direction: column;
-        // position: relative;
     }
 
     .info-title {
@@ -766,6 +784,10 @@ $forText: darkslategray;
     .info-text {
         color: $forText;
         font-size: 13px;
+
+        @media (max-width: 500px) {
+            display: none;
+        }
     }
 
     .info-text-end {
@@ -776,6 +798,10 @@ $forText: darkslategray;
 
         &:hover {
             font-weight: bold;
+        }
+
+        @media (max-width: 500px) {
+            display: none;
         }
     }
 

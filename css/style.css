@@ -503,6 +503,7 @@
 @media (max-width: 500px) {
   .main_card {
     width: 95%;
+    gap: 5px;
   }
 }
 .main_p-title {
@@ -745,6 +746,11 @@
   margin-top: 20px;
   margin-bottom: 70px;
 }
+@media (max-width: 500px) {
+  .main .card-5 {
+    margin-bottom: 5px;
+  }
+}
 .main .card-6 {
   display: flex;
   flex-direction: column;
@@ -754,12 +760,24 @@
   background-color: white;
   height: 70%;
 }
+@media (max-width: 500px) {
+  .main .card-6 {
+    margin-top: 5px;
+    height: 49%;
+  }
+}
 .main .card-7 {
   grid-area: card7;
   background-color: rgb(169, 169, 199);
   height: 220px;
   margin-top: -100px;
   box-sizing: border-box;
+}
+@media (max-width: 500px) {
+  .main .card-7 {
+    margin-top: 5px;
+    height: 52%;
+  }
 }
 
 @media (max-width: 500px) {
@@ -776,6 +794,12 @@
   display: flex;
   justify-content: space-between;
 }
+@media (max-width: 500px) {
+  .footer_container-info {
+    display: flex;
+    flex-direction: column;
+  }
+}
 .footer_info {
   display: flex;
   flex-direction: column;
@@ -790,6 +814,11 @@
   color: darkslategray;
   font-size: 13px;
 }
+@media (max-width: 500px) {
+  .footer .info-text {
+    display: none;
+  }
+}
 .footer .info-text-end {
   color: blue;
   font-size: 13px;
@@ -798,6 +827,11 @@
 }
 .footer .info-text-end:hover {
   font-weight: bold;
+}
+@media (max-width: 500px) {
+  .footer .info-text-end {
+    display: none;
+  }
 }
 .footer .end1 {
   padding-top: 24px;
